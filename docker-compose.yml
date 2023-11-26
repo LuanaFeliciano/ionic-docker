@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build: . # localização do Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app # todos os arquivos que forem alterados serão refletidos no contêiner
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
